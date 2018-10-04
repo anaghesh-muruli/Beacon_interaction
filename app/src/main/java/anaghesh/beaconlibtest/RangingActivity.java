@@ -49,7 +49,7 @@ public class RangingActivity extends Activity implements BeaconConsumer, RangeNo
         Log.e("Inside","DidRange");
         // Encapsulates a beacon identifier of arbitrary byte length
         ArrayList<Identifier> identifiers = new ArrayList<>();
-      region = new Region("AllBeaconsRegion", identifiers);
+        region = new Region("AllBeaconsRegion", identifiers);
         // Set null to indicate that we want to match beacons with any value
         identifiers.add(null);
         // Represents a criteria of fields used to match beacon
@@ -67,13 +67,13 @@ public class RangingActivity extends Activity implements BeaconConsumer, RangeNo
     public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
         if (beacons.size() > 0) {
             Log.e("Inside","DidRange");
-            Log.e(TAG, "Bluetooth MacId "+beacons.iterator().next().getBluetoothAddress());
-            Log.e(TAG, "Bluetooth Name "+beacons.iterator().next().getBluetoothName()+" ");
-            Log.e(TAG, "Dist "+beacons.iterator().next().getDistance()+" ");
-            Log.e(TAG, "Type "+beacons.iterator().next().getBeaconTypeCode()+" ");
-            Log.e(TAG, "Rssi "+beacons.iterator().next().getRssi()+" ");
-            Log.e(TAG, "Tx "+beacons.iterator().next().getTxPower()+" ");
-            Log.e(TAG, "Tx "+beacons.iterator().next().getServiceUuid()+" ");
+            Log.e("Macid", "Bluetooth MacId "+beacons.iterator().next().getBluetoothAddress());
+            Log.e("NAme", "Bluetooth Name "+beacons.iterator().next().getBluetoothName()+" ");
+            Log.e("Dist", "Dist "+beacons.iterator().next().getDistance()+" ");
+            Log.e("Type", "Type "+beacons.iterator().next().getBeaconTypeCode()+" ");
+            Log.e("Rssi", "Rssi "+beacons.iterator().next().getRssi()+" ");
+            Log.e("Tx", "Tx "+beacons.iterator().next().getTxPower()+" ");
+            Log.e("uuid", "Tx "+beacons.iterator().next().getServiceUuid()+" ");
         }
     }
 
